@@ -24,6 +24,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #181818;
 }
 
 .container {
@@ -71,6 +72,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
+  color: var(--font-color);
 }
 
 .special-heading h1::before {
@@ -79,7 +81,7 @@ body {
   width: 150px;
   transform: translateX(-50%);
   height: 1px;
-  background-color: black;
+  background-color: var(--font-color);
   left: 50%;
   bottom: -25px;
 }
@@ -89,12 +91,12 @@ body {
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 1px solid;
+  border: 1px solid var(--font-color);
   border-radius: 50%;
   left: 50%;
   bottom: -35px;
   transform: translateX(-50%);
-  background-color: var(--font-color);
+  background-color: black;
 }
 
 .special-heading p {
@@ -237,13 +239,16 @@ header .scroll-to-top {
 /* Start Landing */
 .landing {
   min-height: 100vh;
-  background-image: url(../images/landing-image.jpg);
+  background-color: #000;
+  background-image: url(../images/landing-image01.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   position: relative;
+  transition: var(--transition-time);
 }
 
 .landing .content {
@@ -323,6 +328,7 @@ header .scroll-to-top {
   height: 20px;
   border: 1px solid var(--font-color);
   border-radius: 50%;
+  transition: var(--transition-time);
 }
 
 .landing .bullets .active {
@@ -368,6 +374,7 @@ header .scroll-to-top {
 
 .services .container .services-content .service .icon i {
   font-size: 40px;
+  color: var(--font-color);
 }
 
 .services .container .services-content .service .text h3 {
@@ -466,6 +473,7 @@ header .scroll-to-top {
 .portfolio .portfolio-content .categories span {
   padding: 10px;
   cursor: pointer;
+  color: var(--font-color);
 }
 
 .portfolio .portfolio-content .categories .active {
@@ -513,7 +521,7 @@ header .scroll-to-top {
   position: absolute;
   width: 100%;
   height: 80px;
-  background-color: var(--font-color);
+  background-color: #000;
   bottom: 0;
   left: 0;
   padding: 10px;
@@ -522,6 +530,10 @@ header .scroll-to-top {
   justify-content: space-evenly;
   transform: translateY(100%);
   transition: var(--transition-time);
+}
+
+.portfolio .portfolio-content .content div .text p:first-child {
+  color: var(--font-color);
 }
 
 .portfolio .portfolio-content .content div .text p:last-child {
@@ -625,6 +637,10 @@ header .scroll-to-top {
   padding: 40px 0;
 }
 
+.statistics .container .status p::before {
+  content: attr(data-text);
+}
+
 @media (max-width: 991px) {
   .statistics .container .status {
     flex-basis: 50%;
@@ -683,6 +699,7 @@ header .scroll-to-top {
   text-align: center;
   font-weight: normal;
   margin-bottom: 40px;
+  color: var(--font-color);
 }
 
 .testimonials-skills .container > div > p {
@@ -700,6 +717,9 @@ header .scroll-to-top {
   display: flex;
   align-items: center;
   margin-bottom: 60px;
+  color: var(--font-color);
+  background-color: #1b1b1b;
+  padding: 10px;
 }
 
 @media (max-width: 767px) {
@@ -752,7 +772,7 @@ header .scroll-to-top {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 1px solid;
+  border: 1px solid var(--font-color);
 }
 
 .testimonials-skills .container .testimonials-content .bullets .active {
@@ -768,7 +788,7 @@ header .scroll-to-top {
   width: 100%;
   height: 35px;
   margin-bottom: 60px;
-  background-color: #eee;
+  background-color: #202020;
   position: relative;
 }
 
@@ -782,10 +802,11 @@ header .scroll-to-top {
   height: 100%;
   background-color: var(--main-color);
   position: relative;
+  transition: 1.5s;
 }
 
 .testimonials-skills .container .skills-content > div div::before {
-  content: attr(data-percentage);
+  content: attr(data-text);
   font-size: 12px;
   color: var(--font-color);
   background-color: #272727;
@@ -850,6 +871,7 @@ header .scroll-to-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  color: var(--font-color);
 }
 
 @media (max-width: 767px) {
@@ -943,7 +965,7 @@ header .scroll-to-top {
 .offering .container .offering-content .offer .order button {
   border: 1px solid var(--main-color);
   background-color: transparent;
-  color: #272727;
+  color: var(--font-color);
   padding: 10px 20px;
   cursor: pointer;
   transition: var(--transition-time);
@@ -1091,7 +1113,10 @@ header .scroll-to-top {
 .contact .container .contact-content .inputs input, 
 .contact .container .contact-content .inputs textarea {
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #3c3c3c;
+  background: none;
+  caret-color: var(--font-color);
+  color: var(--font-color);
 }
 
 .contact .container .contact-content .inputs input:focus, 
