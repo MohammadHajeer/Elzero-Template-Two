@@ -1233,4 +1233,13 @@ footer .container > p span{
   color: var(--main-color);
   font-weight: bold;
 }
+footer .attribution {
+  color: white;
+  text-align: center;
+  font-weight:600;
+  /* padding: calc((var(--section-padding) - 50px)/2) 0 0; */
+}
+footer .attribution a {
+  color: var(--main-color);
+}
 /* End Footer */
